@@ -36,3 +36,23 @@ Deployments in Kubernetes help manage **rolling updates**, allow you to **rollba
 ```bash
 # View all resources including pods, ReplicaSets, and deployments
 kubectl get all
+```
+**Rollout command**
+```bash
+kubectl rollout status deployment/<deployment-name>
+```
+
+**Rollback command**
+```bash
+kubectl rollout undo deployment/<deployment-name>
+```
+
+**History/Revisions command**
+```bash
+kubectl rollout history deployment/<deployment-name>
+```
+
+**Deployment Strategy**
+Two types of deployment strategy
+1) Recreate - the application gets down
+2) Rolling Update (Default) - The application never goes down and it is seamless
